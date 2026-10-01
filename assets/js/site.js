@@ -111,7 +111,7 @@
           '<span class="product-name">' + esc(p.name) + "</span>" +
           (p.brand ? '<span class="product-brand">Brand: ' + esc(p.brand) + "</span>" : "") +
           (p.options ? '<span class="product-options">' + esc(p.options) + "</span>" : "") +
-          (p.colors && p.colors.length ? '<span class="swatches">' + p.colors.map(function (c, i) {
+          ((p.colors || p.views || []).length ? '<span class="swatches">' + (p.colors || p.views).map(function (c, i) {
             return '<button type="button" class="swatch' + (i ? "" : " on") + '" data-img="' + esc(c[1]) + '">' + esc(c[0]) + "</button>";
           }).join("") + "</span>" : "") +
           (p.sizeChart ? '<button type="button" class="size-link" data-chart="' + esc(p.sizeChart) + '">Size chart</button>' : "") +

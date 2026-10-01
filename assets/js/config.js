@@ -42,7 +42,12 @@ window.SITE = {
                    "Size range S\u20134XL; sewn-in label"],
         care: ["Machine wash: cold (max 30C or 90F)", "Do not bleach", "Tumble dry: low heat", "Iron, steam or dry: low heat", "Do not dryclean"] },
       { name: "Hal Detective Sweatshirt", price: "", image: "../assets/img/merch/placeholder-tee.webp", url: "", options: "Sizes & colors coming soon", note: "Coming soon" },
-      { name: "Congress Trade Detective Hat", price: "", image: "../assets/img/merch/placeholder-hat.webp", url: "", options: "Colors coming soon", note: "Coming soon" }
+      { name: "Pelosi Act Hat", price: "", url: "", note: "Coming soon",
+        options: "Color: White · Adjustable strap",
+        image: "../assets/img/merch/hat-pelosi-front.webp",
+        // views: [label, image]. Same as colors, for angle shots.
+        views: [["Front", "../assets/img/merch/hat-pelosi-front.webp"], ["Right", "../assets/img/merch/hat-pelosi-right.webp"],
+                ["Left", "../assets/img/merch/hat-pelosi-left.webp"], ["Back", "../assets/img/merch/hat-pelosi-back.webp"]] }
     ]
   },
 
