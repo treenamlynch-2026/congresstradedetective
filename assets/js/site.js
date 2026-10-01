@@ -104,9 +104,23 @@
           (p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">' : "") +
           '<span class="product-name">' + esc(p.name) + "</span>" +
           (p.options ? '<span class="product-options">' + esc(p.options) + "</span>" : "") +
+          (p.colors && p.colors.length ? '<span class="swatches">' + p.colors.map(function (c, i) {
+            return '<button type="button" class="swatch' + (i ? "" : " on") + '" data-img="' + esc(c[1]) + '">' + esc(c[0]) + "</button>";
+          }).join("") + "</span>" : "") +
+          (p.sizeChart ? '<button type="button" class="size-link" data-chart="' + esc(p.sizeChart) + '">Size chart</button>' : "") +
           (p.price ? '<span class="product-price">' + esc(p.price) + "</span>" : "") +
           (p.note ? '<span class="product-note">' + esc(p.note) + "</span>" : "") + "</" + tag + ">";
       }).join("");
+      grid.addEventListener("click", function (e) {
+        var sw = e.target.closest(".swatch"), sc = e.target.closest(".size-link");
+        if (!sw && !sc) return;
+        e.preventDefault(); e.stopPropagation();
+        if (sw) {
+          var card = sw.closest(".product");
+          card.querySelector("img").src = sw.getAttribute("data-img");
+          card.querySelectorAll(".swatch").forEach(function (b) { b.classList.toggle("on", b === sw); });
+        } else { window.open(sc.getAttribute("data-chart"), "_blank", "noopener"); }
+      });
     } else { var sec = document.getElementById("merch-products"); if (sec) sec.remove(); }
   }
 
