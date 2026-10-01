@@ -24,7 +24,7 @@
     }).join("");
   }
 
-  var NAV = [["home", "", "Home"], ["about", "about/", "About"], ["contact", "contact/", "Contact"]];
+  var NAV = [["home", "", "Home"], ["about", "about/", "About"], ["shop", "shop/", "Shop"], ["contact", "contact/", "Contact"]];
 
   function navLinks() {
     return NAV.map(function (n) {
@@ -86,6 +86,26 @@
   document.querySelectorAll("[data-email]").forEach(function (a) {
     a.href = "mailto:" + S.email; a.textContent = S.email;
   });
+
+  // merch: <a data-store-link>, <div id="merch-grid">
+  var M = S.merch || {};
+  document.querySelectorAll("[data-store-link]").forEach(function (a) {
+    if (M.storeUrl) { a.href = M.storeUrl; a.target = "_blank"; a.rel = "noopener"; }
+    else { a.removeAttribute("href"); a.setAttribute("aria-disabled", "true"); a.textContent = "Merch drop coming soon"; }
+  });
+  var grid = document.getElementById("merch-grid");
+  if (grid) {
+    var items = (M.products || []).filter(function (p) { return p && p.name; });
+    if (items.length) {
+      grid.innerHTML = items.map(function (p) {
+        var link = p.url || M.storeUrl;
+        return '<a class="product"' + (link ? ' href="' + esc(link) + '" target="_blank" rel="noopener"' : "") + ">" +
+          (p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">' : "") +
+          '<span class="product-name">' + esc(p.name) + "</span>" +
+          (p.price ? '<span class="product-price">' + esc(p.price) + "</span>" : "") + "</a>";
+      }).join("");
+    } else { var sec = document.getElementById("merch-products"); if (sec) sec.remove(); }
+  }
 
   // contact form
   var form = document.getElementById("contact-form");

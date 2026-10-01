@@ -20,6 +20,15 @@ window.SITE = {
     x: ""
   },
 
+  // MERCH (/shop/). Paste your print-on-demand store URL (Fourthwall, Printful/Shopify, Spring...).
+  // Leave storeUrl "" to show "Merch drop coming soon".
+  merch: {
+    storeUrl: "",
+    // Featured items. Each: { name, price, image (full URL or path), url (product link) }
+    // Example: { name: "Hal Detective Tee", price: "$24", image: "https://...", url: "https://..." }
+    products: []
+  },
+
   // Contact form delivery (free): https://web3forms.com
   // This key currently delivers to the PourlyMade inbox (xmlBabe@gmail.com).
   // For hal@congresstradedetective.com, request a new key with that address and paste it here.
