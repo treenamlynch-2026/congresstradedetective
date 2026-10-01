@@ -47,7 +47,15 @@ window.SITE = {
         image: "../assets/img/merch/hat-pelosi-front.webp",
         // views: [label, image]. Same as colors, for angle shots.
         views: [["Front", "../assets/img/merch/hat-pelosi-front.webp"], ["Right", "../assets/img/merch/hat-pelosi-right.webp"],
-                ["Left", "../assets/img/merch/hat-pelosi-left.webp"], ["Back", "../assets/img/merch/hat-pelosi-back.webp"]] }
+                ["Left", "../assets/img/merch/hat-pelosi-left.webp"], ["Back", "../assets/img/merch/hat-pelosi-back.webp"]],
+        description: "Introducing the classic dad cap, a timeless accessory crafted for both style and comfort. Made from 100% cotton, this cap offers a soft and breathable feel that's perfect for all-day wear. Its unstructured design and low-profile fit give it a laid-back vibe, while the antique brass buckle closure adds a touch of vintage charm. The matching undervisor and four-row stitching on the visor provide subtle yet stylish details. With six panels and a Permacurv\u00ae visor, this cap offers a perfect blend of durability and classic aesthetics.",
+        features: ["Comfortable fit: unstructured body and low profile for everyday wear",
+                   "Structure: 6 panels, an eyelet on each panel, Permacurv\u00ae visor with 4 rows of stitching",
+                   "Visor: precurved, underbill matches the visor color",
+                   "Adjustable closure: self-fabric hideaway strap with antique brass buckle and grommet",
+                   "One size: circumference 20.87\u201324.80 in, crown height 3.12 in, visor length 2.91 in",
+                   "For adults. Not for use by ages 0\u20133", "Blank product sourced from China"],
+        care: ["Use warm water and dish soap to clean spots off your hat; no need to soak the whole item", "For hard-to-clean spots use a soft-bristled brush"] }
     ]
   },
 
