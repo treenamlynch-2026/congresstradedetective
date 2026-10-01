@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Congress Trade Detective</title>
+<meta name="description" content="Send a tip, correction, or press inquiry to Congress Trade Detective.">
+<meta property="og:title" content="Contact | Congress Trade Detective">
+<meta property="og:description" content="Send a tip, correction, or press inquiry to Congress Trade Detective.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://congresstradedetective.com/assets/img/hal-detective.webp">
+<meta name="theme-color" content="#0C151B">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="contact">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<main id="main">
+
+<section class="section">
+  <div class="container contact-wrap">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h1>Got a tip?</h1>
+      <p class="muted">Spot an error, have a trade worth a closer look, or want to talk press or partnerships? Send it over.</p>
+      <p class="muted">Email: <a data-email href="#">hal@congresstradedetective.com</a></p>
+    </div>
+    <form class="form" id="contact-form">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label>Name<input name="name" type="text" required autocomplete="name"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Topic<input name="topic" type="text" placeholder="Tip, correction, press, other"></label>
+      <label>Message<textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer id="site-footer"></footer>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
