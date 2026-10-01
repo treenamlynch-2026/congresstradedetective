@@ -99,22 +99,28 @@
     if (items.length) {
       grid.innerHTML = items.map(function (p) {
         var link = p.url || M.storeUrl;
-        var tag = link ? "a" : "div";
-        return '<' + tag + ' class="product"' + (link ? ' href="' + esc(link) + '" target="_blank" rel="noopener"' : "") + ">" +
+        var tag = "div";
+        function list(a) { return "<ul>" + a.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>"; }
+        var details = (p.description || p.features || p.care) ? '<details class="product-details"><summary>Details</summary>' +
+          (p.description ? "<p>" + esc(p.description) + "</p>" : "") +
+          (p.features ? "<h4>Product features</h4>" + list(p.features) : "") +
+          (p.care ? "<h4>Care instructions</h4>" + list(p.care) : "") + "</details>" : "";
+        var buy = link ? '<a class="btn product-buy" href="' + esc(link) + '" target="_blank" rel="noopener">Buy now</a>' : "";
+        return '<' + tag + ' class="product">' +
           (p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">' : "") +
           '<span class="product-name">' + esc(p.name) + "</span>" +
+          (p.brand ? '<span class="product-brand">Brand: ' + esc(p.brand) + "</span>" : "") +
           (p.options ? '<span class="product-options">' + esc(p.options) + "</span>" : "") +
           (p.colors && p.colors.length ? '<span class="swatches">' + p.colors.map(function (c, i) {
             return '<button type="button" class="swatch' + (i ? "" : " on") + '" data-img="' + esc(c[1]) + '">' + esc(c[0]) + "</button>";
           }).join("") + "</span>" : "") +
           (p.sizeChart ? '<button type="button" class="size-link" data-chart="' + esc(p.sizeChart) + '">Size chart</button>' : "") +
           (p.price ? '<span class="product-price">' + esc(p.price) + "</span>" : "") +
-          (p.note ? '<span class="product-note">' + esc(p.note) + "</span>" : "") + "</" + tag + ">";
+          (p.note && !link ? '<span class="product-note">' + esc(p.note) + "</span>" : "") + details + buy + "</" + tag + ">";
       }).join("");
       grid.addEventListener("click", function (e) {
         var sw = e.target.closest(".swatch"), sc = e.target.closest(".size-link");
         if (!sw && !sc) return;
-        e.preventDefault(); e.stopPropagation();
         if (sw) {
           var card = sw.closest(".product");
           card.querySelector("img").src = sw.getAttribute("data-img");

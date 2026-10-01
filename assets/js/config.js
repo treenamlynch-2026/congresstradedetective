@@ -29,13 +29,18 @@ window.SITE = {
     // PLACEHOLDERS below - replace image/price/url/options with the real Printify listings.
     products: [
       { name: "Pelosi Act Tee", price: "", url: "", note: "Coming soon",
-        options: "Comfort Colors 1717 · S-4XL",
+        brand: "Comfort Colors 1717", options: "Sizes S-4XL",
         image: "../assets/img/merch/tee-pelosi-navy.webp",
         // colors: [label, image]. Clicking a swatch swaps the card photo.
         colors: [["Navy", "../assets/img/merch/tee-pelosi-navy.webp"], ["Black", "../assets/img/merch/tee-pelosi-black.webp"],
                  ["Seafoam", "../assets/img/merch/tee-pelosi-seafoam.webp"], ["Ivory", "../assets/img/merch/tee-pelosi-ivory.webp"],
                  ["White", "../assets/img/merch/tee-pelosi-white.webp"]],
-        sizeChart: "../assets/img/merch/tee-pelosi-sizechart.webp" },
+        sizeChart: "../assets/img/merch/tee-pelosi-sizechart.webp",
+        description: "Soft, slubby, and lived-in \u2014 this garment-dyed tee carries a warm, tactile feel that invites you to wear it again and again. The front art shows a playful, cartoon-style robot and investigator under the line \u201cCONGRESS TRADE DETECTIVE,\u201d giving the shirt a cheeky, curious personality. Lightweight but substantial, the heavyweight cotton holds its shape while the relaxed fit and pre-shrunk fabric make it easy to layer or wear solo. Pick a color that feels like you; the dye-after-construction finish gives each shirt a unique, slightly vintage hue that deepens with time and wear. This is a quietly bold piece for people who like to spark conversation with clever graphics and a comfortable, slow-worn look.",
+        features: ["100% ring-spun US cotton \u2014 soft, durable, pre-shrunk", "Garment-dyed finish for a vintage, lived-in color and texture",
+                   "Heavyweight 6.1 oz fabric with relaxed, comfortable fit", "Tubular knit (no side seams) and double-needle stitching for durability",
+                   "Size range S\u20134XL; sewn-in label"],
+        care: ["Machine wash: cold (max 30C or 90F)", "Do not bleach", "Tumble dry: low heat", "Iron, steam or dry: low heat", "Do not dryclean"] },
       { name: "Hal Detective Sweatshirt", price: "", image: "../assets/img/merch/placeholder-tee.webp", url: "", options: "Sizes & colors coming soon", note: "Coming soon" },
       { name: "Congress Trade Detective Hat", price: "", image: "../assets/img/merch/placeholder-hat.webp", url: "", options: "Colors coming soon", note: "Coming soon" }
     ]
