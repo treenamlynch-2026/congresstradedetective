@@ -180,3 +180,12 @@ div.product:hover { transform: none; border-color: var(--line); }
 .swatch:hover { color: var(--ink); border-color: var(--muted); }
 .swatch.on { color: var(--ink); border-color: var(--seal); }
 .size-link { align-self: flex-start; font: 600 .82rem var(--sans); color: var(--seal); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
+.product:hover { transform: none; }
+.product-details { margin-top: 6px; border-top: 1px solid var(--line); padding-top: 8px; font-size: .9rem; color: var(--muted); }
+.product-details summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+.product-details p { margin: 8px 0; }
+.product-details h4 { margin: 10px 0 4px; font-size: .85rem; color: var(--ink); }
+.product-details ul { margin: 0; padding-left: 18px; }
+.product-buy { align-self: flex-start; margin-top: 8px; padding: 9px 20px; font-size: .92rem; }
+.products { align-items: start; }
+.product-brand { font-size: .88rem; font-weight: 700; color: var(--seal); }
