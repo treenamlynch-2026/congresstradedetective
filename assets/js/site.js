@@ -99,10 +99,13 @@
     if (items.length) {
       grid.innerHTML = items.map(function (p) {
         var link = p.url || M.storeUrl;
-        return '<a class="product"' + (link ? ' href="' + esc(link) + '" target="_blank" rel="noopener"' : "") + ">" +
+        var tag = link ? "a" : "div";
+        return '<' + tag + ' class="product"' + (link ? ' href="' + esc(link) + '" target="_blank" rel="noopener"' : "") + ">" +
           (p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">' : "") +
           '<span class="product-name">' + esc(p.name) + "</span>" +
-          (p.price ? '<span class="product-price">' + esc(p.price) + "</span>" : "") + "</a>";
+          (p.options ? '<span class="product-options">' + esc(p.options) + "</span>" : "") +
+          (p.price ? '<span class="product-price">' + esc(p.price) + "</span>" : "") +
+          (p.note ? '<span class="product-note">' + esc(p.note) + "</span>" : "") + "</" + tag + ">";
       }).join("");
     } else { var sec = document.getElementById("merch-products"); if (sec) sec.remove(); }
   }

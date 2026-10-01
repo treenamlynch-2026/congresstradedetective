@@ -25,8 +25,13 @@ window.SITE = {
   merch: {
     storeUrl: "",
     // Featured items. Each: { name, price, image (full URL or path), url (product link) }
-    // Example: { name: "Hal Detective Tee", price: "$24", image: "https://...", url: "https://..." }
-    products: []
+    // Optional: options ("S-3XL · Black, Navy"), note (e.g. "Coming soon")
+    // PLACEHOLDERS below - replace image/price/url/options with the real Printify listings.
+    products: [
+      { name: "Hal Detective Tee", price: "", image: "../assets/img/merch/placeholder-tee.webp", url: "", options: "Sizes & colors coming soon", note: "Coming soon" },
+      { name: "Hal Detective Sweatshirt", price: "", image: "../assets/img/merch/placeholder-tee.webp", url: "", options: "Sizes & colors coming soon", note: "Coming soon" },
+      { name: "Congress Trade Detective Hat", price: "", image: "../assets/img/merch/placeholder-hat.webp", url: "", options: "Colors coming soon", note: "Coming soon" }
+    ]
   },
 
   // Contact form delivery (free): https://web3forms.com
