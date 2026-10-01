@@ -156,3 +156,12 @@ p { margin: 0 0 1em; }
 
 /* 404 */
 .notfound { min-height: 60vh; display: grid; place-items: center; text-align: center; padding: 60px 16px; }
+
+/* merch */
+.products { display: grid; gap: 20px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 900px) { .products { grid-template-columns: repeat(4, 1fr); } }
+.product { display: flex; flex-direction: column; gap: 6px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; text-decoration: none; color: var(--ink); transition: border-color .2s, transform .2s; }
+.product:hover { border-color: var(--seal); transform: translateY(-2px); }
+.product img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: var(--paper); }
+.product-name { font-weight: 700; }
+.product-price { color: var(--seal); font-weight: 700; }
