@@ -159,7 +159,7 @@ p { margin: 0 0 1em; }
 
 /* merch */
 .products { display: grid; gap: 20px; grid-template-columns: repeat(2, 1fr); }
-@media (min-width: 900px) { .products { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 900px) { .products { grid-template-columns: repeat(3, 1fr); } }
 .product { display: flex; flex-direction: column; gap: 6px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; text-decoration: none; color: var(--ink); transition: border-color .2s, transform .2s; }
 .product:hover { border-color: var(--seal); transform: translateY(-2px); }
 .product img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; background: var(--paper); }
@@ -171,3 +171,7 @@ p { margin: 0 0 1em; }
 .pose { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 12px 12px; text-align: center; }
 .pose img { width: 100%; height: 200px; object-fit: contain; filter: drop-shadow(0 10px 16px rgba(0,0,0,.45)); }
 .pose figcaption { margin-top: 10px; font-weight: 700; font-size: .95rem; }
+.product img { object-fit: contain; }
+.product-options { color: var(--muted); font-size: .88rem; }
+.product-note { align-self: flex-start; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--seal); border: 1px dashed var(--seal); border-radius: 999px; padding: 3px 10px; margin-top: 4px; }
+div.product:hover { transform: none; border-color: var(--line); }
