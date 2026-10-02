@@ -189,3 +189,5 @@ div.product:hover { transform: none; border-color: var(--line); }
 .product-buy { align-self: flex-start; margin-top: 8px; padding: 9px 20px; font-size: .92rem; }
 .products { align-items: start; }
 .product-brand { font-size: .88rem; font-weight: 700; color: var(--seal); }
+.merch-drop { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.merch-drop .portrait { width: min(380px, 80%); }
