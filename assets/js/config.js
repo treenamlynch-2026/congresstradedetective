@@ -11,6 +11,7 @@ window.SITE = {
   appUrl: "",
 
   // Store links. Leave "" to hide each badge.
+  // When Apple approves the app, paste its App Store URL into appStore: every iPad/app link and status label updates automatically.
   appStore: "",
   playStore: "",
 

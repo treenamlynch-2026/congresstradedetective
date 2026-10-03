@@ -24,7 +24,7 @@
     }).join("");
   }
 
-  var NAV = [["home", "", "Home"], ["about", "about/", "About"], ["shop", "shop/", "Shop"], ["contact", "contact/", "Contact"]];
+  var NAV = [["home", "", "Home"], ["builder", "#builder", "The Builder"], ["about", "about/", "About"], ["shop", "shop/", "Shop"], ["contact", "contact/", "Contact"]];
 
   function navLinks() {
     return NAV.map(function (n) {
@@ -83,6 +83,12 @@
     var url = S[a.getAttribute("data-store")];
     if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; } else { a.remove(); }
   });
+  // iOS app links: <a data-ios> -> App Store listing once S.appStore is set
+  if (S.appStore) {
+    document.querySelectorAll("[data-ios]").forEach(function (a) { a.href = S.appStore; });
+    document.querySelectorAll("[data-ios-label]").forEach(function (el) { el.textContent = "Download on the App Store"; });
+    document.querySelectorAll("[data-ios-status]").forEach(function (el) { el.textContent = "Live on the App Store"; el.classList.add("live"); });
+  }
   document.querySelectorAll("[data-email]").forEach(function (a) {
     a.href = "mailto:" + S.email; a.textContent = S.email;
   });
