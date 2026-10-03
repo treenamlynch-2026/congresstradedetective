@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=9">
+<link rel="stylesheet" href="assets/css/style.css?v=10">
 </head>
 <body data-page="home">
 <a class="skip" href="#main">Skip to content</a>
@@ -38,6 +38,46 @@
   </div>
 </section>
 <div class="strip"><ul><li>Official filings</li><li>Plain English</li><li>No paywall</li></ul></div>
+
+<section class="section builder" id="builder">
+  <div class="container">
+    <div class="builder-head">
+      <p class="eyebrow">Who's behind Hal</p>
+      <h2 class="builder-title">Built by <span class="hl">Treena Lynch.</span><br>Shipped with AI.</h2>
+      <p class="lead">I'm a full-stack systems developer with <strong>20+ years</strong> in C#, SQL, JavaScript and SuiteScript/NetSuite. Congress Trade Detective is my proof of work: I'm moving into AI-augmented development, and instead of just talking about it, I'm shipping real products. Every app, page and video below was designed, built and launched by me, with AI as my pair programmer.</p>
+      <div class="cred"><span class="cred-tag">Track record</span><p>Led a two-year redesign of a legacy ticketing system at World Wide Group: decoupled third-party credit card processing into a WCF service with multi-stage async transaction states, serving <strong>50K+ concurrent users</strong>. Also rebuilt a failing POV system's local application and infrastructure.</p></div>
+    </div>
+
+    <h3 class="builder-sub"><span class="num">01</span> Apple apps</h3>
+    <div class="apps">
+      <a class="app-card" href="https://apps.apple.com/us/app/the-cut-card/id6814679728" target="_blank" rel="noopener">
+        <img src="assets/img/apps/cut-card.webp" width="256" height="256" alt="The Cut Card app icon" loading="lazy">
+        <div><b>The Cut Card</b><span class="app-status live">Live on the App Store</span><p>Blackjack strategy trainer with live odds and shoe tracking. React Native / Expo.</p></div>
+      </a>
+      <a class="app-card" href="https://apps.apple.com/us/developer/treena-lynch/id6813984765" target="_blank" rel="noopener">
+        <img src="assets/img/apps/snapshot-puzzle.webp" width="256" height="256" alt="Snapshot Puzzle app icon" loading="lazy">
+        <div><b>Snapshot Puzzle</b><span class="app-status">In App Review</span><p>Turns your own photos into puzzles. No ads, no account, works offline. iPhone and iPad. React Native / Expo.</p></div>
+      </a>
+      <a class="app-card" data-ios href="https://apps.apple.com/us/developer/treena-lynch/id6813984765" target="_blank" rel="noopener">
+        <img src="assets/img/apps/congress-trade-detective.webp" width="256" height="256" alt="Congress Trade Detective app icon" loading="lazy">
+        <div><b>Congress Trade Detective</b><span class="app-status" data-ios-status>In App Review</span><p>Trade Like a Politician: every STOCK Act filing in one feed. No login, no tracking. Web + iOS via Capacitor.</p></div>
+      </a>
+    </div>
+
+    <div class="builder-grid">
+      <div class="builder-card">
+        <h3 class="builder-sub"><span class="num">02</span> This website</h3>
+        <p class="muted">Designed, written and coded by me: a static site on GitHub Pages with a custom domain, the Hal mascot brand, a print-on-demand merch shop and a working contact form.</p>
+      </div>
+      <div class="builder-card">
+        <h3 class="builder-sub"><span class="num">03</span> YouTube channel</h3>
+        <a data-social="youtube" href="#"><img class="laptop" src="assets/img/hal-laptop-youtube.webp" width="1000" height="451" alt="Hal pointing at a laptop showing the @congresstradedetective YouTube channel" loading="lazy"></a>
+        <p class="muted">Hal hosts long-form breakdowns and Shorts on congressional trades: scripts, thumbnails and AI-generated visuals, produced end to end.</p>
+      </div>
+    </div>
+    <div class="btn-row" style="margin-top:32px"><a class="btn" href="contact/">Hiring? Let's talk</a><a class="btn btn-ghost" data-social="youtube" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>Watch the channel</a></div>
+  </div>
+</section>
 
 <section class="section merch-drop">
   <div class="container split">
@@ -62,21 +102,18 @@
         <li><h3>Hal reports</h3><p>The tracker pulls the filing, decodes it, and adds it to the feed with a link to the source.</p></li>
       </ol>
     </div>
-    <div>
-      <div class="casefile" aria-label="Example case file layout">
-        <div class="casefile-head"><span>Case file</span><span class="tag">Example layout</span></div>
-        <div class="row"><b>Rep. A. Example</b><span class="pill buy">Buy</span><span class="sub">TICKR &middot; traded day 1, filed day 38</span><span class="amt">$15,001&ndash;$50,000</span></div>
-        <div class="row"><b>Sen. B. Sample</b><span class="pill sell">Sell</span><span class="sub">ABCD &middot; traded day 1, filed day 52 (late)</span><span class="amt">$1,001&ndash;$15,000</span></div>
-        <div class="row"><b>Rep. C. Placeholder</b><span class="pill buy">Buy</span><span class="sub">WXYZ &middot; spouse &middot; filed day 12</span><span class="amt">$50,001&ndash;$100,000</span></div>
-      </div>
-      <p class="note">Illustrative layout only. Names and tickers above are placeholders, not real disclosures.</p>
+    <div class="ipad-wrap">
+      <a data-ios href="https://apps.apple.com/us/developer/treena-lynch/id6813984765" target="_blank" rel="noopener"><img class="ipad-hal" src="assets/img/hal-ipad.webp" width="760" height="676" alt="Hal holding an iPad running the Trade Like a Politician app" loading="lazy"></a>
+      <h3>The app: <span class="hl">Trade Like a Politician</span></h3>
+      <p class="muted">An iPhone and iPad app that tracks every stock trade members of Congress disclose under the STOCK Act. See the latest filings, who files late, how many days each trade stayed hidden, how the stock has moved since, cluster trades, and your own watchlist. Free, no login, no tracking.</p>
+      <div class="btn-row"><a class="btn" data-ios href="https://apps.apple.com/us/developer/treena-lynch/id6813984765" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.1.1 2.3-.6 3-1.5z"/></svg><span data-ios-label>In App Review: coming to the App Store</span></a></div>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container split">
-    <img class="portrait" style="width:min(260px,70%)" src="assets/img/hal-agent.webp" width="206" height="260" alt="Hal the robot wearing a headset and holding a chat tablet" loading="lazy">
+    <a class="portrait-link" data-social="youtube" href="#" aria-label="Subscribe to Hal on YouTube"><img class="portrait" src="assets/img/hal-subscribe.webp" width="640" height="559" alt="Hal holding a YouTube like button and a Subscribe button" loading="lazy"></a>
     <div>
       <p class="eyebrow">Weekly newscast</p>
       <h2>Hal reads the filings so you don't have to.</h2>
@@ -88,7 +125,7 @@
 
 </main>
 <footer id="site-footer"></footer>
-<script src="assets/js/config.js?v=9"></script>
-<script src="assets/js/site.js?v=9"></script>
+<script src="assets/js/config.js?v=10"></script>
+<script src="assets/js/site.js?v=10"></script>
 </body>
 </html>
