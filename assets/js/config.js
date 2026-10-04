@@ -33,9 +33,10 @@ window.SITE = {
         brand: "Comfort Colors 1717", options: "Sizes S-4XL",
         image: "../assets/img/merch/tee-pelosi-navy.webp",
         // colors: [label, image]. Clicking a swatch swaps the card photo.
-        colors: [["Navy", "../assets/img/merch/tee-pelosi-navy.webp"], ["Black", "../assets/img/merch/tee-pelosi-black.webp"],
-                 ["Seafoam", "../assets/img/merch/tee-pelosi-seafoam.webp"], ["Ivory", "../assets/img/merch/tee-pelosi-ivory.webp"],
-                 ["White", "../assets/img/merch/tee-pelosi-white.webp"]],
+        colors: [["True Navy", "../assets/img/merch/tee-pelosi-navy.webp"], ["Black", "../assets/img/merch/tee-pelosi-black.webp"],
+                 ["Pepper", "../assets/img/merch/tee-pelosi-pepper.webp"], ["Graphite", "../assets/img/merch/tee-pelosi-graphite.webp"],
+                 ["Red", "../assets/img/merch/tee-pelosi-red.webp"], ["Seafoam", "../assets/img/merch/tee-pelosi-seafoam.webp"],
+                 ["Ivory", "../assets/img/merch/tee-pelosi-ivory.webp"], ["White", "../assets/img/merch/tee-pelosi-white.webp"]],
         sizeChart: "../assets/img/merch/tee-pelosi-sizechart.webp",
         description: "Soft, slubby, and lived-in \u2014 this garment-dyed tee carries a warm, tactile feel that invites you to wear it again and again. The front art shows a playful, cartoon-style robot and investigator under the line \u201cCONGRESS TRADE DETECTIVE,\u201d giving the shirt a cheeky, curious personality. Lightweight but substantial, the heavyweight cotton holds its shape while the relaxed fit and pre-shrunk fabric make it easy to layer or wear solo. Pick a color that feels like you; the dye-after-construction finish gives each shirt a unique, slightly vintage hue that deepens with time and wear. This is a quietly bold piece for people who like to spark conversation with clever graphics and a comfortable, slow-worn look.",
         features: ["100% ring-spun US cotton \u2014 soft, durable, pre-shrunk", "Garment-dyed finish for a vintage, lived-in color and texture",
