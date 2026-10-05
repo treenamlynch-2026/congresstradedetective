@@ -12,6 +12,7 @@ window.SITE = {
 
   // Store links. Leave "" to hide each badge.
   // When Apple approves the app, paste its App Store URL into appStore: every iPad/app link and status label updates automatically.
+  // Congress Trade Detective listing (App ID 6817971302): "https://apps.apple.com/us/app/id6817971302"
   appStore: "",
   playStore: "",
 

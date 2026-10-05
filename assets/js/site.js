@@ -16,6 +16,13 @@
     x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.2L23 22h-6.6l-5.2-6.8L5.3 22H2.2l7.7-8.8L1.7 2h6.8l4.7 6.2L18.9 2zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20z"/></svg>'
   };
   var LABELS = { youtube: "YouTube", tiktok: "TikTok", x: "X" };
+  var APPLE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1-3.2-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1.1 3.1 1.1.1 2.2-.6 3-1.4z"/></svg>';
+  // Footer App Store link: the app listing once S.appStore is set, otherwise the developer page.
+  var APP_STORE_FALLBACK = "https://apps.apple.com/us/developer/treena-lynch/id6813984765";
+  function appStoreLink(cls) {
+    return '<a class="' + cls + '" href="' + esc(S.appStore || APP_STORE_FALLBACK) + '" target="_blank" rel="noopener" aria-label="App Store">' +
+      APPLE_ICON + "<span>App Store</span></a>";
+  }
 
   function socialLinks(cls, withText) {
     return ["youtube", "tiktok", "x"].filter(function (k) { return S.social[k]; }).map(function (k) {
@@ -57,7 +64,7 @@
         "<div>" + BRAND + '<p class="muted" style="margin-top:12px">' + esc(S.tagline) +
         '<br><a href="mailto:' + esc(S.email) + '">' + esc(S.email) + "</a></p></div>" +
         '<nav class="footer-nav" aria-label="Footer">' + navLinks() + '<a href="' + ROOT + 'privacy/">Privacy</a></nav>' +
-        '<div class="footer-social">' + socialLinks("icon-link labeled", true) + "</div>" +
+        '<div class="footer-social">' + socialLinks("icon-link labeled", true) + appStoreLink("icon-link labeled") + "</div>" +
       "</div>" +
       '<div class="container"><p class="disclaimer">Congress Trade Detective reports information from public financial disclosures filed under the STOCK Act. It is not investment advice. Disclosures are filed late, show value ranges rather than exact amounts, and can contain errors; always check the official filing.</p>' +
       '<p class="copyright">&copy; ' + new Date().getFullYear() + " Congress Trade Detective</p></div>";
